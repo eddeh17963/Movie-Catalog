@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box; /*makes it so borders and padding dont add to width and height*/
+}
+
+body {
+    background-color:#131720;
+    font-family: sans-serif;
+}
+
+h3 {
+    color:white
+}
+
+.topnav {
+    overflow: hidden;   /* if content goes passed element box, it is clipped and rest of content will be invisible; no scrollbar*/
+    background-color:#131720;
+    padding: 10px   /*applies padding on all sides*/
+}
+
+.topnav a{  /*applies to a element that is child of .topnav class*/ /*CHECK IF TERMNOLOGY IS CORRECT*/
+    float: left;    /*places "a" element on left side of its container (<div topnav>). text and inline elements will wrap around it*/
+    display: block; /*displays "a" element as "block element", which menas it starts on new line (unlike inline), and takes up all width.*/
+    color:white;
+    text-align: center;
+    padding: 14px 16px;     /* top/bottom ; left/right */
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.topnav .search-container{ /*applies to search-container class elements that are children of topnav class elements*/
+    float:right; /*plaves element on right side of its container*/
+
+}
+
+form{   /* this is the "container" for the search bar (which is the "input" element)*/
+    background-color: #151f30;
+    width: 300px;
+    height: 43px;
+    border-radius: 11px;
+    display: flex; /* makes the box into flexbox. basically, items start in top left corner, and any new items are placed to the left in a row, and when the row is filled up, it starts in the next column*/
+    align-items: center;    /* sets the alignmen-self value on all direct children */
+                            /*however, since we are in flexbox, it actually controls alignment of items on cross axis (in this case vertical)*/
+}
+
+input { /*this is the actual search bar*/
+    all: unset; /* all of "inputs" properties should be changed to their inherited values (from "form"), or to their initial values if not*/
+    font: 15px system-ui; /*changes font of both placeholder and input text*/
+    color: #fff; /*changes color of input text*/
+    height: 100%;
+    width: 100%;    /*makes the search bar as long and wide as form*/
+    padding: 6px 9px;
+}
+
+.thumbnail {
+    height: 350px;
+    width: 300px;
+    border-radius: 19px;
+}
+
+.column {   /*style for entire column*/
+    float: left;
+    width: 25%;
+    padding: 10px 10px;
+}
+
+.card { /*style for individual cards (contains image and movie title)*/
+   border-radius: 19px;
+   padding: 15px;
+   text-align:center;
+   background-color: #151f30;
+}
